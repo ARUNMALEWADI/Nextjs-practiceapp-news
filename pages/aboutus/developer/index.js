@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import styles from '../../styles/Home.module.css'
+import styles from '../../../styles/Home.module.css'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-  <h1>The News page</h1>
+  <h1>Arun Malewadi</h1>
     </div>
   )
 }

@@ -1,10 +1,27 @@
-import Head from 'next/head'
-import styles from '../../styles/Home.module.css'
 
-export default function Home() {
+import Link from "next/Link";
+
+const developers = [
+  { id: 1, name: "Yash" },
+  { id: 2, name: "Vaibhav" },
+  { id: 3, name: "Suresh" },
+];
+
+const AboutUs = () => {
   return (
-    <div className={styles.container}>
-  <h1>About Us</h1>
-    </div>
-  )
-}
+    <>
+      <h1>Developers Names</h1>
+      <ul>
+        {developers.map((developer) => (
+          <li key={developer.id}>
+            <Link href={`/AboutUs/${developer.id}`}>
+              <h2>{developer.name}</h2>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+export default AboutUs;
